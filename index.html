@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anesipho Mazaza Portfolio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Dark mode styles toggled on body.dark-mode */
+    body.dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    body.dark-mode header,
+    body.dark-mode footer {
+      background-color: #0d1b2a;
+    }
+
+    body.dark-mode .hero {
+      background: linear-gradient(135deg, #0d1b2a, #1b263b);
+      color: #f0f0f0;
+    }
+
+    body.dark-mode .project-card,
+    body.dark-mode .about,
+    body.dark-mode .contact,
+    body.dark-mode .experience {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+
+    body.dark-mode .timeline::before,
+    body.dark-mode .timeline-item::before {
+      background-color: #90e0ef;
+    }
+  </style>
+</head>
+
+<body class="light-mode font-sans bg-gray-50 text-gray-900 transition-colors duration-500">
+
+  <!-- Header -->
+  <header
+    class="bg-blue-700 text-white p-4 flex justify-between items-center sticky top-0 z-50 shadow-md transition-colors duration-500">
+    <h1 class="text-xl font-bold">Anesipho Mazaza</h1>
+    <button id="darkModeToggle"
+      class="border border-white px-3 py-1 rounded hover:bg-white hover:text-blue-700 transition focus:outline-none">
+      🌙 Toggle Dark Mode
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section
+    class="hero bg-gradient-to-r from-blue-700 to-cyan-500 text-white text-center py-20 px-4 transition-colors duration-500">
+    <h2 class="text-4xl md:text-6xl font-bold mb-4">Anesipho Mazaza</h2>
+    <h3 class="text-2xl md:text-3xl font-light mb-2">Software Engineer & DevOps Specialist</h3>
+    <p class="text-lg md:text-xl mb-6">Building scalable solutions at the intersection of code and infrastructure</p>
+    <div class="space-x-4">
+      <a href="#projects"
+        class="btn-primary inline-block bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-3 px-6 rounded transition">
+        View My Work
+      </a>
+      <a href="#contact"
+        class="btn-secondary inline-block border border-white text-white hover:bg-white hover:text-blue-700 font-semibold py-3 px-6 rounded transition">
+        Contact Me
+      </a>
+    </div>
+    <div
+      class="tech-icons flex justify-center space-x-6 mt-10 text-4xl animate-bounce text-white max-w-md mx-auto">
+      <i class="devicon-flutter-plain"></i>
+      <i class="devicon-firebase-plain"></i>
+      <i class="devicon-nodejs-plain"></i>
+      <i class="devicon-docker-plain"></i>
+      <i class="devicon-javascript-plain"></i>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about max-w-6xl mx-auto p-6 md:flex md:gap-12 mt-16 transition-colors duration-500">
+    <div class="about-image flex-shrink-0 mb-8 md:mb-0 md:w-1/3 text-center">
+      <img src="anesipho.jpg" alt="Anesipho Mazaza" class="rounded-lg shadow-lg mx-auto max-w-full" />
+    </div>
+    <div class="about-content md:w-2/3">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="mb-6 leading-relaxed text-lg">
+        Software Engineer with expertise in full-stack development and cloud-native solutions. I combine technical
+        skills in JavaScript with DevOps practices to build scalable applications that solve real-world problems.
+      </p>
+      <div class="skills-container flex flex-wrap gap-10">
+        <div class="skill-category w-1/2 md:w-auto">
+          <h3 class="text-xl font-semibold mb-2">Languages</h3>
+          <ul class="list-disc list-inside space-y-1 text-lg">
+            <li>JavaScript/TypeScript</li>
+            <li>Python</li>
+            <li>Java</li>
+          </ul>
+        </div>
+        <div class="skill-category w-1/2 md:w-auto">
+          <h3 class="text-xl font-semibold mb-2">DevOps</h3>
+          <ul class="list-disc list-inside space-y-1 text-lg">
+            <li>Docker</li>
+            <li>GitHub Actions</li>
+            <li>Prometheus</li>
+            <li>Firebase</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects max-w-6xl mx-auto px-6 py-12 bg-gray-100 rounded-lg shadow-lg mt-20 transition-colors duration-500">
+    <h2 class="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
+    <div
+      class="project-grid grid gap-10 grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto place-items-stretch">
+
+      <!-- Project 1 -->
+      <div
+        class="project-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 flex flex-col justify-between">
+        <img src="zaziapply-preview.jpg.png" alt="ZaziApply Screenshot" class="rounded-md mb-4 object-cover h-48 w-full" />
+        <div class="project-info">
+          <h3 class="text-xl font-semibold mb-1">ZaziApply</h3>
+          <p class="text-cyan-700 font-semibold mb-2">JavaScript | Firebase | Node.js</p>
+          <p class="text-gray-700 mb-4">Tertiary application platform helping South African students navigate higher education options.</p>
+          <div class="project-links space-x-4">
+            <a href="#" class="opacity-50 cursor-not-allowed">Live Demo</a>
+            <a href="mailto:aneshmazaza@gmail.com" class="text-cyan-600 hover:underline">Request Access</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div
+        class="project-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 flex flex-col justify-between">
+        <img src="morse-code-preview.jpg.png" alt="Morse Code Translator" class="rounded-md mb-4 object-cover h-48 w-full" />
+        <div class="project-info">
+          <h3 class="text-xl font-semibold mb-1">R2-D2 Morse Code Translator</h3>
+          <p class="text-cyan-700 font-semibold mb-2">JavaScript | Web Audio API</p>
+          <p class="text-gray-700 mb-4">Interactive browser tool for encoding/decoding Morse code with R2-D2 sound effects.</p>
+          <div class="project-links space-x-4">
+            <a href="https://anesipho-mazaza.github.io/R2-D2-Morse-Code-Translator/" target="_blank"
+              class="text-cyan-600 hover:underline">Live Demo</a>
+            <a href="https://github.com/Anesipho-Mazaza/R2-D2-Morse-Code-Translator" target="_blank"
+              class="text-cyan-600 hover:underline">View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div
+        class="project-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 flex flex-col justify-between">
+        <img src="id-validator-preview.jpg" alt="SA ID Validator" class="rounded-md mb-4 object-cover h-48 w-full" />
+        <div class="project-info">
+          <h3 class="text-xl font-semibold mb-1">SA ID Validation System</h3>
+          <p class="text-cyan-700 font-semibold mb-2">Java | Algorithms</p>
+          <p class="text-gray-700 mb-4">South African ID number validator implementing Luhn algorithm and date validation.</p>
+          <div class="project-links">
+            <a href="https://github.com/Anesipho-Mazaza/sa-id-validation" target="_blank"
+              class="text-cyan-600 hover:underline">View Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="view-more text-center mt-10">
+      <a href="https://github.com/Anesipho-Mazaza" target="_blank"
+        class="inline-block bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800 transition">
+        <i class="devicon-github-original"></i> View More on GitHub
+      </a>
+    </div>
+  </section>
+
+<!-- Experience -->
+<section id="experience" class="max-w-6xl mx-auto px-6 py-12 mt-20 transition-colors duration-500">
+  <h2 class="text-3xl font-bold mb-12 text-center">Professional Journey</h2>
+
+  <div class="relative ml-6 pl-6 border-l-4 border-cyan-600 space-y-16">
+
+    <!-- Timeline item 1 -->
+    <div class="relative group">
+      <!-- Dot -->
+      <div class="absolute -left-10 top-4 w-4 h-4 bg-cyan-600 rounded-full border-4 border-white shadow-md transition group-hover:bg-cyan-400"></div>
+      
+      <!-- Content -->
+      <div class="pl-2">
+        <div class="text-cyan-600 text-lg font-bold mb-2 select-none">JUNE 2025 - Present</div>
+        <h3 class="text-xl font-semibold text-slate-900">IT FREELANCING</h3>
+        <h4 class="font-medium text-gray-600 dark:text-gray-300 mb-2">ZaziTech Group</h4>
+        <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-400 leading-relaxed">
+          <li>Led development of ZaziApply platform serving 10,000+ users</li>
+          <li>Implemented CI/CD pipelines reducing deployment time by 65%</li>
+          <li>Designed monitoring system decreasing downtime by 30%</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Timeline item 2 -->
+    <div class="relative group">
+      <div class="absolute -left-10 top-4 w-4 h-4 bg-cyan-600 rounded-full border-4 border-white shadow-md transition group-hover:bg-cyan-400"></div>
+      
+      <div class="pl-2">
+        <div class="text-cyan-600 text-lg font-bold mb-2 select-none">NOVEMBER 2025</div>
+        <h3 class="text-xl font-semibold text-slate-900">DevOps Intern</h3>
+        <h4 class="font-medium text-gray-600 dark:text-gray-300 mb-2">Capaciti</h4>
+        <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-400 leading-relaxed">
+          <li>Built CI/CD pipelines with GitHub Actions for automated testing and deployment</li>
+  <li>Worked with Docker & Kubernetes to manage scalable application environments</li>
+  <li>Monitored performance using Prometheus & Grafana to reduce system downtime</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Timeline item 3 -->
+    <div class="relative group">
+      <div class="absolute -left-10 top-4 w-4 h-4 bg-cyan-600 rounded-full border-4 border-white shadow-md transition group-hover:bg-cyan-400"></div>
+      
+      <div class="pl-2">
+        <div class="text-cyan-600 text-lg font-bold mb-2 select-none">GRADUATED MARCH 2022</div>
+        <h3 class="text-xl font-semibold text-slate-900">National Diploma in IT (Business Applications)</h3>
+        <h4 class="font-medium text-gray-600 dark:text-gray-300 mb-2">Walter Sisulu University</h4>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact max-w-6xl mx-auto px-6 py-12 mt-20 bg-gray-100 rounded-lg shadow-lg transition-colors duration-500">
+    <h2 class="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
+    <div class="contact-container md:flex md:gap-12">
+
+      <div class="contact-info md:w-1/2 mb-10 md:mb-0">
+        <h3 class="text-2xl font-semibold mb-4">Let's collaborate</h3>
+        <p class="mb-6 text-lg">I'm currently open to new opportunities and interesting projects.</p>
+        <div class="contact-methods space-y-4 text-lg">
+          <a href="mailto:aneshmazaza@gmail.com" class="flex items-center space-x-3 text-cyan-700 hover:underline">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 12l-4-4m0 0l-4 4m4-4v12" />
+            </svg>
+            <span>aneshmazaza@gmail.com</span>
+          </a>
+          <a href="tel:+27793407062" class="flex items-center space-x-3 text-cyan-700 hover:underline">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 10l6 6m0 0l6-6m-6 6V3" />
+            </svg>
+            <span>+27 79 340 7062</span>
+          </a>
+          <a href="https://linkedin.com/in/anesipho-mazaza" target="_blank"
+            class="flex items-center space-x-3 text-cyan-700 hover:underline">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"
+              stroke="none">
+              <path
+                d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.23c-.97 0-1.75-.79-1.75-1.77 0-.99.78-1.77 1.75-1.77s1.75.78 1.75 1.77c0 .98-.78 1.77-1.75 1.77zm13.5 11.23h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.88 0-2.17 1.47-2.17 2.98v5.68h-3v-10h2.89v1.36h.04c.4-.76 1.37-1.56 2.82-1.56 3.02 0 3.58 1.99 3.58 4.58v5.62z" />
+            </svg>
+            <span>linkedin.com/in/anesipho-mazaza</span>
+          </a>
+        </div>
+      </div>
+
+      <form
+        class="contact-form md:w-1/2 bg-white rounded-lg p-6 shadow-md"
+        action="mailto:aneshmazaza@gmail.com" method="POST" enctype="text/plain">
+        <div class="form-group mb-4">
+          <input type="text" name="name" placeholder="Your Name" required
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+        </div>
+        <div class="form-group mb-4">
+          <input type="email" name="email" placeholder="Your Email" required
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+        </div>
+        <div class="form-group mb-4">
+          <textarea name="message" rows="5" placeholder="Your Message" required
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400 resize-none"></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-cyan-600 text-white py-3 font-semibold rounded hover:bg-cyan-700 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="footer bg-blue-700 text-white text-center py-6 mt-16 transition-colors duration-500">
+    <p>&copy; 2025 Anesipho Mazaza • Built with 💻 passion and ☕ coffee</p>
+    <div class="mt-2">
+      <a href="https://github.com/Anesipho-Mazaza" target="_blank" class="underline mx-2 hover:text-cyan-400">GitHub</a>|
+      <a href="https://linkedin.com/in/anesipho-mazaza" target="_blank" class="underline mx-2 hover:text-cyan-400">LinkedIn</a>|
+      <a href="#" class="underline mx-2 hover:text-cyan-400">Portfolio</a>
+    </div>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    const toggleBtn = document.getElementById('darkModeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        toggleBtn.textContent = '☀️ Light Mode';
+      } else {
+        toggleBtn.textContent = '🌙 Toggle Dark Mode';
+      }
+    });
+  </script>
+
+</body>
+
+</html>
